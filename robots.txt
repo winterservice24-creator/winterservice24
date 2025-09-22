@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+
+# Blockiere unnötige Dateien/Ordner (falls vorhanden)
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /admin/
+
+# Sitemap-Link für Google & Co.
+Sitemap: https://winterservice24.de/sitemap.xml
