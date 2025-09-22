@@ -1,0 +1,3 @@
+http://www.winterservice24.de/*  https://winterservice24.de/:splat  301!
+http://winterservice24.de/*      https://winterservice24.de/:splat  301!
+https://www.winterservice24.de/* https://winterservice24.de/:splat  301!
