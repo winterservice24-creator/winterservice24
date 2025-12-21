@@ -3,9 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>WinterService24 | Winterdienst & Schneeräumung in Berlin</title>
-  <meta name="description" content="WinterService24: Professioneller Winterdienst & Gartendienst in Berlin. Schneeräumung, Streudienst, Gehwegreinigung & Gartenpflege im Winter. Jetzt Angebot anfordern!" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <title>WinterService24 | Außenpflege in Berlin – Winterdienst & Gartenservice</title>
+  <meta name="description" content="WinterService24: Außenpflege in Berlin – Winterdienst (Schneeräumung & Streudienst) sowie Garten- & Grundstückspflege aus einer Hand. Haftpflichtversichert, zuverlässig, 24/7 einsatzbereit. Kostenloses Angebot anfordern." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&display=swap" rel="stylesheet">
 
   <!-- Google Analytics / Tag Manager -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-RF1BFNT7BL"></script>
@@ -14,6 +17,25 @@
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'G-RF1BFNT7BL');
+  </script>
+
+  <!-- JSON-LD: LocalBusiness -->
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"LocalBusiness",
+    "name":"WinterService24",
+    "url":"https://winterservice24.de",
+    "telephone":"+4915560812886",
+    "email":"winterservice24@gmail.com",
+    "areaServed":["Berlin","Brandenburg"],
+    "address":{
+      "@type":"PostalAddress",
+      "addressLocality":"Berlin",
+      "addressCountry":"DE"
+    },
+    "description":"Außenpflege in Berlin – Winterdienst (Schneeräumung & Streudienst) sowie Garten- und Grundstückspflege aus einer Hand. Haftpflichtversichert, zuverlässig, 24/7 einsatzbereit."
+  }
   </script>
 
   <!-- JSON-LD FAQ Schema -->
@@ -123,83 +145,182 @@
   </script>
 
   <style>
-    :root{--primary:#0E3A66;--accent:#1E90FF;--bg:#f7f9fb;--text:#1f1f1f;--muted:#6b7280;--white:#fff;--shadow:0 10px 25px rgba(0,0,0,.08);--radius:16px}
+    :root{
+      --primary:#0E3A66;
+      --accent:#1E90FF;
+      --bg:#f7f9fb;
+      --text:#1f1f1f;
+      --muted:#6b7280;
+      --white:#fff;
+      --shadow:0 10px 25px rgba(0,0,0,.08);
+      --radius:16px
+    }
     *{margin:0;padding:0;box-sizing:border-box}
     body{font-family:Poppins,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;scroll-behavior:smooth}
     a{text-decoration:none;color:inherit}
     .container{max-width:1180px;margin:0 auto;padding:0 20px}
+
     /* NAV */
-    .nav{position:fixed;top:0;width:100%;height:64px;background:rgba(14,58,102,.9);backdrop-filter:blur(6px);z-index:50;box-shadow:var(--shadow)}
+    .nav{
+      position:fixed;top:0;width:100%;height:64px;
+      background:rgba(14,58,102,.92);backdrop-filter:blur(6px);
+      z-index:50;box-shadow:var(--shadow)
+    }
     .nav .inner{display:flex;align-items:center;justify-content:space-between;height:64px}
-    .brand{display:flex;align-items:center;gap:10px;color:#fff;font-weight:700}
-    .brand img{width:40px;height:40px;border-radius:6px;object-fit:contain;background:#fff;padding:2px}
-    .menu{display:flex;gap:20px}
-    .menu a{color:#e8f2ff;font-weight:600;opacity:.9}
+    .brand{display:flex;align-items:center;gap:10px;color:#fff;font-weight:800}
+    .brand img{width:40px;height:40px;border-radius:8px;object-fit:contain;background:#fff;padding:2px}
+    .menu{display:flex;gap:18px;align-items:center}
+    .menu a{color:#e8f2ff;font-weight:600;opacity:.92}
     .menu a:hover{opacity:1}
+    .menu .nav-cta{
+      background:var(--accent);
+      color:#fff;
+      padding:10px 14px;
+      border-radius:12px;
+      font-weight:800;
+      box-shadow:0 10px 18px rgba(30,144,255,.25);
+    }
     .cta-phone{display:none}
+
     /* HERO */
-    .hero{padding:120px 0 72px;
-      background:linear-gradient(180deg,rgba(14,58,102,.9),rgba(14,58,102,.7)),
+    .hero{
+      padding:120px 0 52px;
+      background:
+        linear-gradient(180deg,rgba(14,58,102,.92),rgba(14,58,102,.72)),
         url('https://images.unsplash.com/photo-1608889175639-936f55e8a9c4?q=80&w=1600&auto=format&fit=crop') center/cover no-repeat;
-      color:#fff;text-align:center}
-    .hero h1{font-size:clamp(32px,6vw,56px);margin-bottom:12px;font-weight:800}
-    .hero p.lead{font-size:clamp(16px,2.4vw,20px);opacity:.95;margin-bottom:24px}
+      color:#fff;text-align:center
+    }
+    .hero h1{font-size:clamp(32px,6vw,56px);margin-bottom:10px;font-weight:800;letter-spacing:-.5px}
+    .hero p.lead{font-size:clamp(16px,2.4vw,20px);opacity:.95;margin:0 auto 18px;max-width:980px}
+    .trust-row{
+      display:flex;gap:10px;flex-wrap:wrap;justify-content:center;
+      margin:6px auto 22px;max-width:980px
+    }
+    .pill{
+      background:rgba(255,255,255,.14);
+      border:1px solid rgba(255,255,255,.22);
+      padding:8px 12px;border-radius:999px;
+      font-weight:600;font-size:14px
+    }
     .actions{display:flex;gap:12px;flex-wrap:wrap;justify-content:center}
-    .btn{padding:12px 18px;border-radius:12px;border:2px solid transparent;font-weight:700;cursor:pointer;transition:.2s}
+    .btn{padding:12px 18px;border-radius:12px;border:2px solid transparent;font-weight:800;cursor:pointer;transition:.2s;display:inline-flex;align-items:center;gap:8px}
     .btn-primary{background:var(--accent);color:#fff}
-    .btn-primary:hover{filter:brightness(.95)}
-    .btn-outline{background:transparent;border:2px solid #fff;color:#fff}
+    .btn-primary:hover{filter:brightness(.96)}
+    .btn-outline{background:transparent;border:2px solid rgba(255,255,255,.9);color:#fff}
     .btn-outline:hover{background:rgba(255,255,255,.1)}
+    .micro{margin-top:10px;color:rgba(255,255,255,.85);font-size:13px}
+
     /* SECTIONS */
     section{padding:72px 0}
     h2.section-title{text-align:center;font-size:28px;color:var(--primary);margin-bottom:10px}
-    p.section-sub{text-align:center;color:var(--muted);max-width:820px;margin:0 auto 24px}
+    p.section-sub{text-align:center;color:var(--muted);max-width:920px;margin:0 auto 24px}
     .grid{display:grid;gap:22px}
-    .grid-3{grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
-    .card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;text-align:center}
-    .card img{width:100%;height:180px;object-fit:cover;border-radius:10px;margin-bottom:10px}
-    .card h3{color:var(--primary);margin-bottom:6px}
+    .grid-2{grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+    .card{background:#fff;border-radius:var(--radius);box-shadow:var(--shadow);padding:22px;text-align:left}
+    .card.center{text-align:center}
+    .card img{width:100%;height:190px;object-fit:cover;border-radius:12px;margin-bottom:12px}
+    .card h3{color:var(--primary);margin-bottom:8px}
     .card p{color:var(--muted)}
+    .bullets{margin-top:12px;display:grid;gap:8px;color:var(--muted)}
+    .bullets li{list-style:none}
+    .sub-cta{margin-top:14px}
+    .sub-cta a{color:var(--accent);font-weight:800}
+    .sub-cta a:hover{text-decoration:underline}
+
     /* SLIDER */
-    .slider{position:relative;max-width:900px;margin:0 auto;overflow:hidden;border-radius:16px;box-shadow:var(--shadow)}
+    .slider{position:relative;max-width:980px;margin:0 auto;overflow:hidden;border-radius:16px;box-shadow:var(--shadow);background:#000}
     .slides{display:flex;transition:transform .6s ease-in-out}
-    .slides img{width:100%;height:450px;object-fit:cover}
+    .slide{position:relative;min-width:100%}
+    .slide img{width:100%;height:460px;object-fit:cover;display:block;opacity:.92}
+    .caption{
+      position:absolute;left:14px;bottom:14px;
+      background:rgba(14,58,102,.85);
+      color:#fff;border-radius:12px;padding:10px 12px;
+      max-width:92%;
+      box-shadow:0 10px 18px rgba(0,0,0,.25)
+    }
+    .caption strong{display:block;font-weight:800}
+    .caption span{display:block;font-size:13px;opacity:.9}
+
+    .slider-block{margin-top:26px}
+    .slider-label{
+      max-width:980px;margin:0 auto 10px;
+      display:flex;justify-content:space-between;align-items:flex-end;gap:12px;flex-wrap:wrap;
+    }
+    .slider-label h3{color:var(--primary);font-size:20px;font-weight:900}
+    .slider-label p{color:var(--muted);font-size:14px}
+
     /* TESTIMONIALS */
-    .testimonials{position:relative;overflow:hidden;max-width:800px;margin:0 auto}
-    .testimonial{display:none;text-align:center;background:#fff;padding:24px;border-radius:16px;box-shadow:var(--shadow)}
+    .testimonials{position:relative;overflow:hidden;max-width:900px;margin:0 auto}
+    .testimonial{display:none;text-align:center;background:#fff;padding:26px;border-radius:16px;box-shadow:var(--shadow)}
     .testimonial.active{display:block}
     .stars{color:#FBBF24;font-size:20px;margin-bottom:8px}
-    .testimonial p{color:var(--muted)}
-    .testimonial small{display:block;margin-top:8px;color:var(--primary);font-weight:600}
+    .testimonial p{color:var(--muted);max-width:760px;margin:0 auto}
+    .testimonial small{display:block;margin-top:10px;color:var(--primary);font-weight:700}
+
     /* MAP */
     .map{border:0;width:100%;height:360px;border-radius:16px;box-shadow:var(--shadow)}
+
+    /* FAQ */
+    .faq-grid{display:grid;gap:18px;max-width:980px;margin:0 auto}
+    .faq-item{background:#fff;border-radius:16px;box-shadow:var(--shadow);padding:18px}
+    .faq-item h3{color:var(--primary);margin-bottom:6px;font-size:18px}
+    .faq-item p{color:var(--muted)}
+    .faq-cta{
+      margin:22px auto 0;max-width:980px;text-align:center;
+      color:var(--muted)
+    }
+    .faq-cta a{color:var(--accent);font-weight:900}
+
     /* FORM */
-    .form{max-width:680px;margin:0 auto;display:flex;flex-direction:column;gap:14px}
-    input,textarea,select{padding:12px;border:1px solid #ddd;border-radius:12px;font:inherit}
+    .form-wrap{
+      background:#fff;border-radius:16px;box-shadow:var(--shadow);
+      padding:22px;max-width:760px;margin:0 auto
+    }
+    .form{display:flex;flex-direction:column;gap:14px}
+    input,textarea{padding:12px;border:1px solid #ddd;border-radius:12px;font:inherit}
     textarea{min-height:120px}
+    .form-notes{
+      display:flex;gap:12px;flex-wrap:wrap;justify-content:center;
+      color:var(--muted);font-size:14px;margin:10px 0 0
+    }
+    .form-notes span{background:#f3f6fb;border:1px solid #e7eef9;padding:8px 10px;border-radius:999px}
+
     /* FOOTER / FLOAT CALL */
     footer{background:var(--primary);color:#e8f2ff;padding:24px;text-align:center;margin-top:40px}
-    .call-float{position:fixed;bottom:16px;right:16px;background:#10B981;color:#fff;padding:14px 18px;border-radius:50px;box-shadow:var(--shadow);font-weight:700;display:none}
-    @media(max-width:720px){.menu{display:none}.cta-phone{display:inline-flex}.call-float{display:flex}}
+    footer a{color:#e8f2ff;text-decoration:underline}
+    .call-float{position:fixed;bottom:16px;right:16px;background:#10B981;color:#fff;padding:14px 18px;border-radius:50px;box-shadow:var(--shadow);font-weight:900;display:none}
+
+    @media(max-width:900px){
+      .menu{display:none}
+      .cta-phone{display:inline-flex}
+      .call-float{display:flex}
+    }
+    @media(max-width:720px){
+      .slide img{height:360px}
+    }
   </style>
 </head>
+
 <body>
 
   <!-- NAV -->
   <nav class="nav">
     <div class="inner container">
-      <a href="#top" class="brand">
+      <a href="#top" class="brand" aria-label="Startseite">
         <img src="https://i.ibb.co/hJzsLX1n/Whats-App-Image-2024-08-28-at-20-32-11.jpg" alt="WinterService24 Logo">
         WinterService24
       </a>
-      <div class="menu">
+
+      <div class="menu" role="navigation" aria-label="Hauptnavigation">
         <a href="#services">Leistungen</a>
         <a href="#slider">Einsatzbilder</a>
         <a href="#bewertungen">Bewertungen</a>
         <a href="#gebiet">Einsatzgebiet</a>
         <a href="#faq">FAQ</a>
-        <a href="#kontakt">Angebot</a>
+        <a class="nav-cta" href="#kontakt">Angebot anfordern</a>
       </div>
+
       <a href="tel:+4915560812886" class="btn btn-outline cta-phone">Jetzt anrufen</a>
     </div>
   </nav>
@@ -207,33 +328,63 @@
   <!-- HERO -->
   <header id="top" class="hero">
     <div class="container">
-      <h1>Schnee- & Gartendienst in Berlin & Umgebung</h1>
-      <p class="lead">Winterdienst Berlin: Schneeräumung, Streudienst, Gehwegreinigung & Gartenpflege im Winter. Für Privat & Gewerbe – zuverlässig & rechtssicher.</p>
+      <h1>Außenpflege in Berlin – Winterdienst & Gartenservice aus einer Hand</h1>
+      <p class="lead">
+        Wir betreuen Gehwege, Zufahrten, Höfe und Grünflächen ganzjährig:
+        rechtssicher im Winter, gepflegt im Sommer – für WEGs, Gewerbe und Privatobjekte.
+      </p>
+
+      <div class="trust-row" aria-label="Vertrauensmerkmale">
+        <div class="pill">✔ Haftpflichtversichert & gesetzeskonform</div>
+        <div class="pill">✔ 24/7 einsatzbereit bei Schnee & Glätte</div>
+        <div class="pill">✔ Erfahrung mit WEGs & Gewerbe</div>
+      </div>
+
       <div class="actions">
-        <a href="#kontakt" class="btn btn-primary">Jetzt Angebot anfordern</a>
+        <a href="#kontakt" class="btn btn-primary">Kostenloses Angebot anfordern</a>
         <a href="tel:+4915560812886" class="btn btn-outline">📞 015560812886</a>
       </div>
+      <div class="micro">Antwort in der Regel innerhalb von 24 Stunden</div>
     </div>
   </header>
 
   <!-- SERVICES -->
   <section id="services">
     <div class="container">
-      <h2 class="section-title">Unsere Leistungen</h2>
-      <div class="grid grid-3">
+      <h2 class="section-title">Leistungen – klar & planbar</h2>
+      <p class="section-sub">
+        Ob Räum- und Streupflicht im Winter oder gepflegte Außenanlagen über das Jahr:
+        Wir übernehmen zuverlässig – modular oder als Komplettbetreuung.
+      </p>
+
+      <div class="grid grid-2">
+        <!-- WINTERDIENST -->
         <div class="card">
-          <img src="https://i.ibb.co/FqdQC7TK/IMG-5836.jpg" alt="Schneeräumung Berlin Einsatz">
-          <h3>Schneeräumung</h3>
-          <p>Wir räumen Gehwege, Einfahrten, Parkplätze & Firmenflächen – pünktlich und zuverlässig in ganz Berlin.</p>
+          <img src="https://i.ibb.co/vxM7fRH6/fotolia-50270270-subscription-monthly-xl.avif" alt="Winterdienst Berlin: Winterdienstfahrzeug im Einsatz">
+          <h3>Winterdienst in Berlin</h3>
+          <p>Wir übernehmen Ihre Räum- und Streupflicht zuverlässig – auch bei starkem Schneefall, nachts sowie an Sonn- und Feiertagen.</p>
+          <ul class="bullets">
+            <li>❄️ Schneeräumung von Gehwegen, Zufahrten & Höfen</li>
+            <li>🧂 Streudienst bei Glätte (gesetzeskonform)</li>
+            <li>🚗 Kontrollgänge bei Dauerschnee</li>
+            <li>⏱️ Notfall- & Bereitschaftsdienst</li>
+          </ul>
+          <div class="sub-cta"><a href="#kontakt">Winterdienst anfragen →</a></div>
         </div>
+
+        <!-- AUSSENPFLEGE -->
         <div class="card">
-          <img src="https://i.ibb.co/DgG870LD/IMG-5830.jpg" alt="Streudienst Berlin Einsatz">
-          <h3>Streudienst</h3>
-          <p>Glättebeseitigung mit umweltfreundlichen Streumitteln – gesetzeskonform & sicher.</p>
-        </div>
-        <div class="card">
-          <h3>Gartenpflege im Winter</h3>
-          <p>Laubentfernung, Rückschnitt & Winterschutz – schützt Ihre Anlagen und spart Kosten im Frühling.</p>
+          <!-- HINWEIS: gewünschtes Unsplash-Bild, optimiert auf w=1200 -->
+          <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?q=80&w=1200&auto=format&fit=crop" alt="Garten- und Außenpflege Berlin: gepflegte Außenanlagen">
+          <h3>Garten- & Außenpflege</h3>
+          <p>Gepflegte Außenanlagen steigern Sicherheit, Werterhalt und den Gesamteindruck Ihrer Immobilie – das ganze Jahr über.</p>
+          <ul class="bullets">
+            <li>🌿 Gartenpflege & regelmäßiger Rückschnitt</li>
+            <li>🍂 Laubentfernung & Herbstpflege</li>
+            <li>🧹 Pflege von Grün- und Außenflächen</li>
+            <li>🛡️ Wintervorbereitung von Gärten & Anlagen</li>
+          </ul>
+          <div class="sub-cta"><a href="#kontakt">Außenpflege anfragen →</a></div>
         </div>
       </div>
     </div>
@@ -243,16 +394,97 @@
   <section id="slider">
     <div class="container">
       <h2 class="section-title">Echte Einsatzbilder</h2>
-      <p class="section-sub">So sehen Wege, Einfahrten und Anlagen nach unserem Winterdienst in Berlin aus.</p>
-      <div class="slider">
-        <div class="slides" id="slides">
-          <img src="https://i.ibb.co/FqdQC7TK/IMG-5836.jpg" alt="Gesäuberter Gehweg Berlin">
-          <img src="https://i.ibb.co/DgG870LD/IMG-5830.jpg" alt="Winterdienst Berlin Charlottenburg">
-          <img src="https://i.ibb.co/V0Lx4HBy/IMG-5970.jpg" alt="Schneeräumung Berlin Kreuzberg">
-          <img src="https://i.ibb.co/RT619nQk/IMG-8259.jpg" alt="Parkplatz Winterdienst Berlin">
-          <img src="https://i.ibb.co/vxckzLRW/IMG-8264.jpg" alt="Einsatzfoto Schneeräumung Neukölln">
+      <p class="section-sub">Konkrete Einsätze – damit Sie sehen, wie es nach unserer Arbeit aussieht.</p>
+
+      <div class="slider-label">
+        <h3>Winterdienst – Einsätze</h3>
+        <p>Räumung, Streuung und Kontrollfahrten – zuverlässig & dokumentierbar.</p>
+      </div>
+      <div class="slider" aria-label="Winterdienst Einsatzbilder Slider">
+        <div class="slides" id="slides-winter">
+          <div class="slide">
+            <img src="https://i.ibb.co/FqdQC7TK/IMG-5836.jpg" alt="Schneeräumung Berlin – geräumte Zufahrt">
+            <div class="caption">
+              <strong>Schneeräumung – Zufahrt & Wege</strong>
+              <span>Berlin · früh morgens vor Arbeitsbeginn</span>
+            </div>
+          </div>
+
+          <div class="slide">
+            <img src="https://i.ibb.co/DgG870LD/IMG-5830.jpg" alt="Streudienst Berlin – Glättebeseitigung">
+            <div class="caption">
+              <strong>Streudienst – Glättebeseitigung</strong>
+              <span>Berlin · gesetzeskonform & sicher</span>
+            </div>
+          </div>
+
+          <div class="slide">
+            <img src="https://i.ibb.co/V0Lx4HBy/IMG-5970.jpg" alt="Winterdienst Berlin – kontrollierte Wege bei Schneefall">
+            <div class="caption">
+              <strong>Kontrollfahrt bei Dauerschnee</strong>
+              <span>Berlin · mehrere Einsätze am Tag möglich</span>
+            </div>
+          </div>
+
+          <div class="slide">
+            <img src="https://i.ibb.co/RT619nQk/IMG-8259.jpg" alt="Winterdienst Berlin – geräumter Parkplatz">
+            <div class="caption">
+              <strong>Parkplatz & Einfahrt geräumt</strong>
+              <span>Berlin · für Gewerbe & Wohnanlagen</span>
+            </div>
+          </div>
+
+          <div class="slide">
+            <img src="https://i.ibb.co/vxckzLRW/IMG-8264.jpg" alt="Schneeräumung Berlin – Einsatzfoto">
+            <div class="caption">
+              <strong>Einsatz bei Schnee & Glätte</strong>
+              <span>Berlin · 24/7 einsatzbereit</span>
+            </div>
+          </div>
         </div>
       </div>
+
+      <div class="slider-block"></div>
+      <div class="slider-label">
+        <h3>Garten- & Außenpflege – Einsätze</h3>
+        <p>Grünpflege, Hecken-/Formschnitt und Außenreinigung – professioneller Immobilien-Eindruck.</p>
+      </div>
+      <div class="slider" aria-label="Garten- und Außenpflege Einsatzbilder Slider">
+        <div class="slides" id="slides-garten">
+          <div class="slide">
+            <img src="https://i.ibb.co/vxM7fRH6/fotolia-50270270-subscription-monthly-xl.avif" alt="Gartenpflege Berlin – gepflegte Außenanlage">
+            <div class="caption">
+              <strong>Gartenpflege – gepflegte Außenanlagen</strong>
+              <span>Für WEGs, Gewerbe & Privat · sauberer Gesamteindruck</span>
+            </div>
+          </div>
+
+          <div class="slide">
+            <img src="https://i.ibb.co/N2xbLT65/lawn-maintenance-worker-is-cleaning-up-yard-using-leaf-blower-tool-1920w.webp" alt="Grünflächenpflege Berlin – Laub- und Flächenreinigung">
+            <div class="caption">
+              <strong>Grünflächenpflege – Laub & Wege</strong>
+              <span>Saisonal oder im Turnus · planbar & zuverlässig</span>
+            </div>
+          </div>
+
+          <div class="slide">
+            <img src="https://i.ibb.co/mFDRNvbK/Untitled-design-3.webp" alt="Hecken- und Formschnitt Berlin – präzise Pflege">
+            <div class="caption">
+              <strong>Hecken- & Formschnitt</strong>
+              <span>Saubere Kanten · professionelle Außenwirkung</span>
+            </div>
+          </div>
+
+          <div class="slide">
+            <img src="https://i.ibb.co/LdN0wJjR/HPW-POWER-WASHING-ENTRY-BUSINESS-2356-x-1571-1200x800.jpg" alt="Außenreinigung Berlin – Hochdruckreinigung von Eingangsbereichen">
+            <div class="caption">
+              <strong>Außenreinigung – Eingänge & Wege</strong>
+              <span>Hochdruckreinigung · sicher & gepflegt</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -260,6 +492,8 @@
   <section id="bewertungen">
     <div class="container">
       <h2 class="section-title">Kundenbewertungen</h2>
+      <p class="section-sub">Kurze Stimmen – typisch für das, was Kunden an uns schätzen: Zuverlässigkeit, Planbarkeit, Sauberkeit.</p>
+
       <div class="testimonials">
         <div class="testimonial active">
           <div class="stars">★★★★★</div>
@@ -269,11 +503,11 @@
         <div class="testimonial">
           <div class="stars">★★★★★</div>
           <p>„Auch bei starkem Schneefall mehrfach kontrolliert – absolut professionell.“</p>
-          <small>— J. Becker, Charlottenburg</small>
+          <small>— J. Becker, Berlin-Charlottenburg</small>
         </div>
         <div class="testimonial">
           <div class="stars">★★★★★</div>
-          <p>„Gartenpflege im Winter hat Schäden verhindert. Im Frühling war alles top.“</p>
+          <p>„Außenpflege im Winter hat Schäden verhindert. Im Frühling war alles top.“</p>
           <small>— S. Roth, Potsdam</small>
         </div>
       </div>
@@ -284,44 +518,51 @@
   <section id="gebiet">
     <div class="container">
       <h2 class="section-title">Einsatzgebiet</h2>
-      <p class="section-sub">Wir betreuen ganz Berlin & das direkte Umland.</p>
-      <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193526.441222152!2d13.144554!3d52.506931!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a851c9c38df4c7%3A0x4b6f6c1f8f79a58f!2sBerlin!5e0!3m2!1sde!2sde!4v1700000000002" allowfullscreen="" loading="lazy" title="Berlin Karte"></iframe>
+      <p class="section-sub">Berlin & direktes Umland – zuverlässige Betreuung für Wohnanlagen, Gewerbe und Privatobjekte.</p>
+      <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193526.441222152!2d13.144554!3d52.506931!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47a851c9c38df4c7%3A0x4b6f6c1f8f79a58f!2sBerlin!5e0!3m2!1sde!2sde!4v1700000000002" allowfullscreen="" loading="lazy" title="Einsatzgebiet WinterService24 Berlin"></iframe>
     </div>
   </section>
 
   <!-- FAQ -->
   <section id="faq">
     <div class="container">
-      <h2 class="section-title">FAQ – Häufige Fragen zum Winterdienst in Berlin</h2>
-      <div class="grid">
-        <div>
+      <h2 class="section-title">FAQ – Häufige Fragen</h2>
+      <p class="section-sub">Kurz und konkret – die wichtigsten Punkte zu Räum-/Streupflicht und Ablauf.</p>
+
+      <div class="faq-grid">
+        <div class="faq-item">
           <h3>Wie teuer ist der Winterdienst in Berlin?</h3>
           <p>Die Preise richten sich nach Größe, Lage und Häufigkeit des Einsatzes. Für kleine Flächen beginnen die Kosten ab ca. 50 € pro Monat, größere Objekte werden individuell kalkuliert.</p>
         </div>
-        <div>
+        <div class="faq-item">
           <h3>Bin ich als Hauseigentümer verpflichtet, Schnee zu räumen?</h3>
           <p>Ja. Laut Berliner Straßenreinigungsgesetz sind Eigentümer verpflichtet, Gehwege werktags bis 7 Uhr und an Sonn- & Feiertagen bis 9 Uhr zu räumen. Diese Pflicht kann an WinterService24 übertragen werden.</p>
         </div>
-        <div>
+        <div class="faq-item">
           <h3>Wann und wie oft kommt WinterService24 zum Einsatz?</h3>
           <p>Wir beginnen frühmorgens vor Arbeitsbeginn und kommen je nach Wetterlage auch mehrmals täglich. Bei Dauerschneefall kontrollieren wir regelmäßig.</p>
         </div>
-        <div>
+        <div class="faq-item">
           <h3>Wer haftet bei Unfällen durch Schnee und Glätte?</h3>
-          <p>Ohne Winterdienst haftet der Eigentümer oder Mieter. Beauftragen Sie uns, übernehmen wir zuverlässig die Verantwortung.</p>
+          <p>Ohne Winterdienst haftet der Eigentümer oder Mieter. Beauftragen Sie uns, übernehmen wir zuverlässig die Räum- und Streupflichten – damit Sie rechtlich abgesichert sind.</p>
         </div>
-        <div>
+        <div class="faq-item">
           <h3>Welche Streumittel verwenden Sie?</h3>
           <p>Wir nutzen umweltfreundliche Streumittel – Salz nur dort, wo es gesetzlich erlaubt ist (z. B. auf Treppen).</p>
         </div>
-        <div>
+        <div class="faq-item">
           <h3>Arbeiten Sie auch an Wochenenden und Feiertagen?</h3>
-          <p>Ja, unser Team ist 24/7 im Einsatz – auch nachts, an Sonn- und Feiertagen.</p>
+          <p>Ja, unser Team ist 24/7 einsatzbereit – auch nachts, an Sonn- und Feiertagen.</p>
         </div>
-        <div>
+        <div class="faq-item">
           <h3>Wie früh sollte ich einen Winterdienstvertrag abschließen?</h3>
           <p>Spätestens im Herbst (Oktober/November), damit Kapazitäten garantiert werden können.</p>
         </div>
+      </div>
+
+      <div class="faq-cta">
+        👉 Sie möchten Winterdienst und Außenpflege zuverlässig abgeben?
+        <a href="#kontakt">Jetzt unverbindliches Angebot anfordern</a>.
       </div>
     </div>
   </section>
@@ -330,13 +571,18 @@
   <section>
     <div class="container">
       <h2 class="section-title">Warum WinterService24?</h2>
-      <p class="section-sub">Ihr Winterdienst & Gartendienst in Berlin – zuverlässig, schnell und fair.</p>
-      <ul style="list-style:none;padding:0;text-align:center;color:var(--muted)">
-        <li>❄️ <b>Winterdienst Berlin</b> – Schneeräumung & Streudienst</li>
-        <li>🌿 <b>Gartendienst Berlin</b> – Pflege auch im Winter</li>
-        <li>🏠 Für Privat, Gewerbe & Hausverwaltungen</li>
-        <li>📍 Einsatzgebiet: Ganz Berlin & Umgebung</li>
-      </ul>
+      <p class="section-sub">Ein Ansprechpartner für sichere Wege im Winter und gepflegte Außenanlagen über das Jahr.</p>
+
+      <div class="grid grid-2">
+        <div class="card center">
+          <h3>Für WEGs, Gewerbe & Privat</h3>
+          <p>Planbare Betreuung, klare Kommunikation und zuverlässige Ausführung – ideal für Hausverwaltungen und Eigentümer.</p>
+        </div>
+        <div class="card center">
+          <h3>Außenpflege – Sommer wie Winter</h3>
+          <p>Winterdienst + Garten- und Grundstückspflege: modular buchbar oder als ganzjähriges Paket.</p>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -344,23 +590,33 @@
   <section id="kontakt">
     <div class="container">
       <h2 class="section-title">Jetzt Angebot anfordern</h2>
-      <form class="form" action="https://formsubmit.co/winterservice24@gmail.com" method="POST">
-        <input type="hidden" name="_subject" value="Neue Anfrage von WinterService24">
-        <input type="hidden" name="_captcha" value="false">
-        <input type="hidden" name="_template" value="table">
-        <input type="hidden" name="_next" value="https://winterservice24.de/danke.html">
+      <p class="section-sub">Unverbindlich & kostenlos. Je genauer Fläche/Ort, desto schneller können wir kalkulieren.</p>
 
-        <input type="text" name="Name" placeholder="Ihr Name" required>
-        <input type="email" name="E-Mail" placeholder="Ihre E-Mail" required>
-        <input type="tel" name="Telefon" placeholder="Telefonnummer (optional)">
-        <textarea name="Nachricht" placeholder="Beschreiben Sie Ihr Anliegen (Fläche, Ort …)" required></textarea>
-        <button type="submit" class="btn btn-primary">Anfrage senden</button>
-      </form>
+      <div class="form-wrap">
+        <div class="form-notes" aria-label="Kontaktvorteile">
+          <span>✔ Unverbindlich & kostenlos</span>
+          <span>✔ Rückmeldung meist innerhalb von 24 Stunden</span>
+          <span>✔ Berlin & direktes Umland</span>
+        </div>
 
-      <p class="section-sub" style="margin-top:12px">
-        📞 Direkt anrufen: <a href="tel:+4915560812886"><b>015560812886</b></a> · 
-        ✉️ Mail: <a href="mailto:winterservice24@gmail.com"><b>winterservice24@gmail.com</b></a>
-      </p>
+        <form class="form" action="https://formsubmit.co/winterservice24@gmail.com" method="POST">
+          <input type="hidden" name="_subject" value="Neue Anfrage von WinterService24">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+          <input type="hidden" name="_next" value="https://winterservice24.de/danke.html">
+
+          <input type="text" name="Name" placeholder="Ihr Name" required>
+          <input type="email" name="E-Mail" placeholder="Ihre E-Mail" required>
+          <input type="tel" name="Telefon" placeholder="Telefonnummer (optional)">
+          <textarea name="Nachricht" placeholder="Beschreiben Sie Ihr Anliegen (Adresse/Ort, Fläche, Objektart: WEG/Gewerbe/Privat …)" required></textarea>
+          <button type="submit" class="btn btn-primary">Anfrage senden</button>
+        </form>
+
+        <p class="section-sub" style="margin-top:14px">
+          📞 Direkt anrufen: <a href="tel:+4915560812886"><b>015560812886</b></a> ·
+          ✉️ Mail: <a href="mailto:winterservice24@gmail.com"><b>winterservice24@gmail.com</b></a>
+        </p>
+      </div>
     </div>
   </section>
 
@@ -368,8 +624,8 @@
   <footer>
     <p>© 2025 WinterService24 – Berlin</p>
     <p>
-      <a href="impressum.html">Impressum</a> · 
-      <a href="datenschutz.html">Datenschutz</a> · 
+      <a href="impressum.html">Impressum</a> ·
+      <a href="datenschutz.html">Datenschutz</a> ·
       <a href="mailto:winterservice24@gmail.com">winterservice24@gmail.com</a>
     </p>
   </footer>
@@ -385,15 +641,23 @@
       testimonials[tIndex].classList.remove('active');
       tIndex = (tIndex+1) % testimonials.length;
       testimonials[tIndex].classList.add('active');
-    },4000);
+    }, 4500);
 
-    // Einsatzbilder-Slider
-    const slides = document.getElementById('slides');
-    let sIndex = 0;
+    // WINTER Einsatzbilder-Slider
+    const slidesWinter = document.getElementById('slides-winter');
+    let sIndexWinter = 0;
     setInterval(()=>{
-      sIndex = (sIndex+1) % slides.children.length;
-      slides.style.transform = `translateX(-${sIndex*100}%)`;
-    },3500);
+      sIndexWinter = (sIndexWinter+1) % slidesWinter.children.length;
+      slidesWinter.style.transform = `translateX(-${sIndexWinter*100}%)`;
+    }, 3800);
+
+    // GARTEN Einsatzbilder-Slider
+    const slidesGarten = document.getElementById('slides-garten');
+    let sIndexGarten = 0;
+    setInterval(()=>{
+      sIndexGarten = (sIndexGarten+1) % slidesGarten.children.length;
+      slidesGarten.style.transform = `translateX(-${sIndexGarten*100}%)`;
+    }, 4100);
   </script>
 </body>
 </html>
